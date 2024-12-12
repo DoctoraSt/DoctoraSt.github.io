@@ -1,0 +1,310 @@
+body{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+}
+
+nav{
+    background-color: #1f1f1f;  
+    box-shadow: 0px 0px 2px 2px #464646;
+    border-bottom: 25px;
+}
+
+.sobreMi{
+    margin: 1%;
+}
+
+.text-encriptador{
+    color: #000000;
+}
+
+.links{
+    display: flex;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+}
+
+.links a{
+    color: #d9d2d0;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: #E9E910;
+    text-decoration: none;
+}
+
+button a{
+    color: #d9d2d0;
+    text-decoration: none;
+}
+
+button a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+
+h3{
+    color: azure;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+h1{
+    color: azure;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+p{
+    color: #d9d2d0;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.fond{
+    color: #d9d2d0;
+    font-weight: 700;
+}
+
+.fondo1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    padding: 32px;
+    justify-content: space-between;
+}
+
+.fondo2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    padding: 32px;
+    justify-content: space-between;
+}
+
+.fondo3{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;  
+}
+
+.container{
+    width: 176px;
+    height: 174px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    border-radius: 40px;
+    gap: 8px;
+    background: var(--preto-branco, #3B403F);
+}
+
+.container2{
+    width: 176px;
+    height: 220px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 40px;
+    gap: 8px;
+    background: var(--preto-branco, black);
+}
+
+.HTML{
+    width: 130px;
+    height: 110px;
+    margin: 10px;
+    padding: auto;
+    align-self: center;
+}
+
+.udemy{
+    justify-content: center;
+    width: 150px;
+    height: 130px;
+    margin-top: 10px;
+}
+
+.fcfm{
+    justify-content: center;
+    margin-top: 10px;
+    width: 114px; 
+    height: 94px;
+}
+
+.alura{
+    width: 152px; 
+    height: 112px;
+}
+
+
+.container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobil{
+    padding: 3%;
+    width: 100%;
+}
+
+.repoBoton{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #000000;
+    color: #d9d2d0;
+    border: none;
+}
+
+.repoBoton:hover{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #d9d2d0;
+    color: #000000;
+    border: none;
+}
+
+.demoBoton{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #464646;
+    color: #d9d2d0;
+    border: none;
+}
+
+.demoBoton:hover{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #d9d2d0;
+    color: #464646;
+    border: none;
+}
+
+
+.botones{
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.botones2{
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttonMore{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    text-align: center;
+}
+
+.area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.recuadroForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex: 1 0 0;
+}
+
+.arriba{
+	background:#76aadb;
+	bottom:0px;
+	display: block;
+	height: 50px;
+	position: fixed;
+	right:0px;
+	width:50px;
+}
+
+/**-- Cambio de estilo para tablet -- **/
+@media screen and (max-width: 768px)  {
+    header{
+        width: 768px;
+    }
+    
+    .mobil{
+        display: flex;
+        padding: 2%;
+        width: 100%;
+    }
+
+    .sobreMi{
+        margin: 3%;
+        padding: 1%;
+    }
+
+    .container{
+        margin: 1%;
+        padding: 1%;
+    }
+}
+
+/**--Cambio de estilo a teléfono--**/
+@media screen and (max-width: 480px){
+    header{
+        width: 480px;
+    }
+
+    .minium{
+        font-size: smaller;
+        padding: 1%;
+    }
+
+    .sobreMi{
+        padding: 2%;
+    }
+
+    .container{
+        display: flex;
+        width: 100px;
+        padding: 1%;
+        margin: 1%;
+        justify-content: center;
+    }
+
+    .HTML{
+        width: 100%;
+    }
+
+    .container2{
+        margin: 1%;
+    }
+
+    .fondo2{
+        margin: 1%;
+    }
+
+    .mobil{
+        display: flex;
+        width: 90%;
+        margin: 5%;
+        justify-content: center;
+    }
+}

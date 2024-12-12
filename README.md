@@ -1,2 +1,1 @@
-# DoctoraSt.github.io
-Portafolio de actividades personales.
+Portafolio de actividades.
