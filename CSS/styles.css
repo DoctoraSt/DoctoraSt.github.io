@@ -243,6 +243,7 @@ footer{
 	width:50px;
 }
 
+
 /**-- Cambio de estilo para tablet -- **/
 @media screen and (max-width: 768px)  {
     header{
@@ -272,8 +273,12 @@ footer{
         width: 480px;
     }
 
+    .links{
+        font-size: small;
+    }
+
     .minium{
-        font-size: smaller;
+        font-size: small;
         padding: 1%;
     }
 
@@ -293,12 +298,22 @@ footer{
         width: 100%;
     }
 
+    .container{
+        width: 30%;
+    }
+
     .container2{
         margin: 1%;
+        padding: 1%;
+    }
+
+    .fondo1{
+        padding: 2%;
     }
 
     .fondo2{
         margin: 1%;
+        padding: 0%;
     }
 
     .mobil{
