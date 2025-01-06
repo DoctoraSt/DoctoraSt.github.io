@@ -26,10 +26,11 @@ function encriptar(stringEncriptar){
 }
 
 //Botón para desencriptar
-function btnDesencriptar(stringDesencriptar){
+function btnDesencriptar(){
     const textoEncriptado = Desencriptar(textarea.value);
     mensaje.value = textoEncriptado;
     textarea.value = "";
+    mensaje.style.backgroundImage ="none";
 }
 
 //Desencripta lo escrito
@@ -47,5 +48,18 @@ function Desencriptar(stringDesencriptar){
 
 //Función para copiar
 function btnCopiar(){
-    const copiar = document.getElementById("mensaje").value;
+    document.getElementById('btnCopiar').addEventListener('click', function () {
+        const texto = document.getElementById('texto').value;
+        if (texto.trim() !== '') {
+            navigator.clipboard.writeText(texto)
+                .then(() => {
+                    alert('Texto copiado al portapapeles');
+                })
+                .catch(err => {
+                    console.error('Error al copiar al portapapeles:', err);
+                });
+        } else {
+            alert('El campo de texto está vacío. Por favor, escribe algo para copiar.');
+        }
+    });
 }

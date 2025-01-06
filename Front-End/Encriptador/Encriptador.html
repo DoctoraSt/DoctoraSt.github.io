@@ -11,15 +11,15 @@
     <title>Encriptador</title>
 </head>
 <body>
-    <heaer>
-        <img src="Logo.png" alt="Logo de Alura" class="Logo">
-    </heaer>
+    <header>
+        <img src="Imagenes/Logo.png" alt="Logo de Alura" class="Logo">
+    </header>
     <main>
         <!-- Sección donde se coloca el primer texto -->
-        <section>  
-            <textarea  class="text-area" cols="30" rows="10" placeholder="Ingrese su texto"></textarea>
+        <section>
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese su texto"></textarea>
             <div>
-                <h6 class="informacion">Solo letras minusculas y sin acento</h6>
+                <h6 class="informacion">Solo letras minúsculas y sin acento</h6>
             </div>
             <div class="botones">
                 <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
@@ -27,14 +27,16 @@
             </div>
         </section>
 
-        <!-- Sección donde se ve los textos encriptados / desencriptados -->
+        <!-- Sección donde se ven los textos encriptados / desencriptados -->
         <section>
-            <textarea id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
+            <textarea id="mensaje" title="Area encriptar" class="mensaje" cols="30" rows="10">
+            </textarea>
             <div>
-                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+                <button id="btnCopiar" class="btn-copiar" onclick="btnCopiar()">Copiar</button>
             </div>
         </section>
     </main>
-    <script src="/Encriptador.js"></script>
+
+    <script src="Encriptador.js"></script>
 </body>
 </html>
