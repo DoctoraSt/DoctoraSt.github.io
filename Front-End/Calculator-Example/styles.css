@@ -7,25 +7,32 @@ body{
 h1{
     font-family: monospace;
 }
+
 p{
     font-family: monospace
 }
+
 button{
     background-color: #ee9ca7;
     border-radius: 10px;
     width: 100px;
 }
+
 button:hover{
     color: aliceblue;
+    background-color: #98323f;
 }
-.container{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-}
+
 input{
     width: 100px;
 }
+
+.bigContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ingresoNum{
     display: flex;
     align-items: center;
@@ -34,4 +41,11 @@ input{
     padding: 5px;
     height: 25px;
     width: 200px;
+}
+
+.numeros{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: space-around;
 }
