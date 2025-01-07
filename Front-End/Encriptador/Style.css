@@ -125,5 +125,35 @@ main{
 }
 
 @media screen and (max-width: 480px){
-    
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+    }
+
+    .text-area{
+        width: 70%;
+    }
+
+    button{
+        margin: 2%;
+    }
+
+    .uno{
+        margin: 3%;
+        padding: 3%;
+    }
+
+    .dos{
+        margin: 3%;
+        padding: 3%;
+    }
+
+    .mensaje{
+        margin: 1%;
+        width: 90%;
+        height: 2%;
+        border: none;
+        margin-right: 0%;
+    }
 }
