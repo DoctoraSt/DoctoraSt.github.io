@@ -129,6 +129,12 @@ p{
     align-self: center;
 }
 
+.bootstrap{
+    width: 140px;
+    height: 140px;
+    align-self: center;
+}
+
 .udemy{
     justify-content: center;
     width: 150px;
@@ -147,7 +153,6 @@ p{
     width: 152px; 
     height: 112px;
 }
-
 
 .container3{
     display: flex;
@@ -191,7 +196,6 @@ p{
     color: #464646;
     border: none;
 }
-
 
 .botones{
     display: flex;
