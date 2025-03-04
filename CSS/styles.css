@@ -63,8 +63,8 @@ h1{
 p{
     color: #d9d2d0;
     font-family:'Raleway', sans-serif;
+    font-size: 20px;
     font-weight: bold;
-    font-size: 14px;
 }
 
 
@@ -111,8 +111,8 @@ p{
 }
 
 .container2{
-    width: 176px;
-    height: 220px;
+    width: 200px;
+    height: 225px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
