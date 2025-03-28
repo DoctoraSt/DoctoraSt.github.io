@@ -266,11 +266,7 @@ footer{
 }
 
 /**--Cambio de estilo a teléfono--**/
-@media screen and (max-width: 480px){
-    header{
-        width: 480px;
-    }
-
+@media screen and (max-width: 680px){
     .links{
         font-size: small;
     }
