@@ -4,12 +4,6 @@ body{
     background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
 }
 
-nav{
-    background-color: #1f1f1f;  
-    box-shadow: 0px 0px 2px 2px #464646;
-    border-bottom: 25px;
-}
-
 .sobreMi{
     margin: 1%;
 }
@@ -259,6 +253,16 @@ footer{
         margin: 1%;
         padding: 1%;
     }
+
+    .links a{
+        color: #d9d2d0;
+        text-decoration: none;
+    }
+    
+    .links a:hover{
+        color: #E9E910;
+        text-decoration: none;
+    }
 }
 
 /**--Cambio de estilo a teléfono--**/
@@ -280,20 +284,13 @@ footer{
         padding: 2%;
     }
 
-    .container{
-        display: flex;
-        width: 100px;
-        padding: 1%;
-        margin: 1%;
-        justify-content: center;
-    }
-
     .HTML{
-        width: 100%;
+        display: flex;
+        margin: 1%;
     }
 
-    .container{
-        width: 30%;
+    .letras{
+        margin: 10%;
     }
 
     .container2{
@@ -302,12 +299,29 @@ footer{
     }
 
     .fondo1{
-        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .container{
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .fondo2{
-        margin: 1%;
-        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .container2{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .mobil{
@@ -315,5 +329,15 @@ footer{
         width: 90%;
         margin: 5%;
         justify-content: center;
+    }
+
+    .links a{
+        color: #d9d2d0;
+        text-decoration: none;
+    }
+    
+    .links a:hover{
+        color: #E9E910;
+        text-decoration: none;
     }
 }
