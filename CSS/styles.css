@@ -8,10 +8,6 @@ body{
     margin: 1%;
 }
 
-.text-encriptador{
-    color: #000000;
-}
-
 .links{
     display: flex;
     font-weight: bold;
@@ -52,6 +48,7 @@ h1{
     color: azure;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    font-weight: bold;
 }
 
 p{
@@ -234,10 +231,7 @@ footer{
 
 /**-- Cambio de estilo para tablet -- **/
 @media screen and (max-width: 768px)  {
-    header{
-        width: 768px;
-    }
-    
+
     .mobil{
         display: flex;
         padding: 2%;
