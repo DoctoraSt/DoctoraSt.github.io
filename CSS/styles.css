@@ -8,6 +8,16 @@ body{
     margin: 1%;
 }
 
+li{
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .links{
     display: flex;
     font-weight: bold;
@@ -110,6 +120,11 @@ p{
     border-radius: 40px;
     gap: 8px;
     background: var(--preto-branco, black);
+}
+
+.sol{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .HTML{
