@@ -1,65 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel = "stylesheet" href="CSS/principal.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
-    <link rel="icon" href ="Imagenes/Logo 2 PNG.png">
-    <title>Acerca de</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/acerca.css"> 
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="Imagenes/Logo PNG.png" rel="icon" height="10" widht="10">
+    <title>Sobre nosotros</title>
 </head>
 <body>
-    <header>
-        <div class="navBar">
-            <p><a href="Principal.html">Inicio</a></p>
-            <p><a href="Acerca.html">Acerca</a></p>
-            <p><a href="Contacto.html">Contacto</a></p>
-            <p><a href="Servicios.html">Servicios</a></p>
-            <ion-icon name="search"></ion-icon>
+    <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="Imagenes/Logo PNG.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top logo">
+                    GL Logistics
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Principal.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Acerca.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Rastreo.html">Rastreo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    <article class="fondo">
+        <div class="container">
+            <h3 class="titulo1">Existiendo desde 2023</h3>
+            <h1 class="titulo2">Conectando al mundo,
+                un viaje a la vez.
+            </h1>
+            <h2 class="titulo3">
+                Construyendo el futuro de la logística mundial con precisión, sustentabilidad
+                y tecnología que nos permite ver el cielo, tierra y el mar
+            </h2>
         </div>
-        <div class="divition">
-            <img title="logo" src="Imagenes/Logo 2 PNG.png">
+    </article>
+    <article class="mision">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-sm-6">
+                    <h2 class="titulo1">Nuestra misión & visión</h2>
+                    <p>Deseamos redifinir las reglas del transporte, dando transparencia al usuario 
+                        y ayuda en cualquier momento</p>
+                </div>
+                    <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#02403a" class="bi bi-bullseye" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                        <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+                                        <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                    </svg>
+                                    <h5 class="card-title">Misión</h5>
+                                    <p class="card-text">Para ofrecer continuidad, usar tecnología de vanguardia que mejore el negocio de la 
+                                        logística globalmente con eficiencia.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#02403a" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                </svg>
+                                <h5 class="card-title">Visión</h5>
+                                <p class="card-text">Transformarnos en la logística que más personas confían, implementamos estándares con eficiencia
+                                    y dominamos todo tipo de transporte.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
-    </header>
+    </article>
+    <article class="review">
+        <div class="titulos">
+            <h4>No solamente nos creas a nosotros</h4>
+            <h1>Mira nuestras reseñas</h1>
+            <h4>Y deja que las demás personas te digan como somos.</h4>
+        </div>
+        <div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </div>
+                        <p class="card-text review-text">"GL Logistics ha transformado nuestra manera de comunicarnos con el transportista. Eficientes  y rápidos.</p>
+                    </div>
+                    <div class="card-footer">
+                        <h5>Alexander Wright</h5>
+                        <small>Global Manufacturing Inc.</small>
+                    </div>
+                </div>
+            </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </div>
+                            <p class="card-text review-text">"Su integración por tierra y mar fue exactamente lo que necesitabamos. Una empresa que 
+                                realmente entiende el mercado de la logística"
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <h5>Sarah Jenkins</h5>
+                            <small>Apex Retail System</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#02403a" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </div>
+                            <p class="card-text review-text">"Sus leyes e iniciativas con el medio ambiente nos permite reducir nuestra huella de carbono, eligiendo transportes 
+                                que protegen al planeta"
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <h5>Michael Chen</h5>
+                            <small>Echotech Solutions</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="fundadores">
+        <div>
+            <div class="titulos-fundadores">
+                <h4>Conoce a nuestros fundadores</h4>
+                <h1>Nuestro equipo de líderes</h1>
+            </div>
+            <div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                        <img src="Imagenes/persona 1.jpg " class="card-img-top" alt="Co-fundador"  height="300" width="200">
+                        <div class="card-body">
+                            <h5 class="card-title">Marcus Vane</h5>
+                            <h6>Chief Executive Officer</h6>
+                            <p class="card-text">25+ años como manager en logística, cabeza de nuestra empresa.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                        <img src="Imagenes/persona 2.jpg" class="card-img-top" alt="Fundadora" height="300" width="200">
+                        <div class="card-body">
+                            <h5 class="card-title">Elena Rodriguez</h5>
+                            <h6>Fundadora de GL Logístics</h6>
+                            <p class="card-text">Especialista en carga marítima.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                        <img src="Imagenes/persona 3.jpg" class="card-img-top" alt="..." height="300" width="200">
+                            <div class="card-body">
+                                <h5 class="card-title">David Mullen</h5>
+                                <h6>Chief of system deparment</h6>
+                                <p class="card-text">Experto en integración tecnologíca y en rastreo en tiempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
     <article>
-        <div class="circulo-central">
-            <div class="circulo">
-                <h3>Misión:</h3>
-                <p>Buscamos poder crear una cadena en la que nuestros 
-                    clientes puedan comunicarse entre si.</p>
-            </div>
-            <div class="circulo">
-                <h3>Visión:</h3>
-                <p>Ser conocidos como una empresa que cumple con sus espectativas y la de sus clientes
-                    manejando un amplio espacio en la república mexicana.</p>
-            </div>
-            <div class="circulo">
-                <h3>Pasión:</h3>
-                <br>
-                <p>Mostrar pasión por el trabajo de y la comunicación empresa/cliente. 
-                Consistencia a la hora de comunicarse con los transportistas y satisfacción 
-                en el logro de los objetivos.</p>
+        <div class="infoAdicional">
+            <h1>¿Listo para expandir tu huella de manera global?</h1>
+            <p>Únete a nuestro equipo o contáctanos para cotizar nuestros servicios.</p>
+            <div>
+                <a href="Contacto.html" class="btnContacto">Contáctanos</a>
+                <a href="#" class="btnTrabajo">Únete a nuestro equipo</a>
             </div>
         </div>
     </article>
-    <article class="info">
-        <h1>Competencias:</h1>
-        <p>Son las principales aptitudes o habilidades con las que cuenta nuestro equipo de trabajo.</p>
-    </article>
-    <footer>
-        <div class="pie" id="columnas">
-            <i class="bi bi-facebook"> Facebook oficial</i>
-            <br>
-            <i class="bi bi-whatsapp"> Whatsapp</i>
-            <br>
-            <i class="bi bi-envelope"> Correo</i>
-            <br>
-            <p>Llámanos</p>
-            <p>81-800-900</p>
-        </div>
-    </footer>
+    <footer class="final-mayor">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <p>Michelle Leal.</p>
+                    </div>
+                    <div class="col">
+                        <p>Página creada como parte de un portafolio de actividades.</p>
+                    </div>
+                </div>
+        </footer>
 </body>
 </html>
