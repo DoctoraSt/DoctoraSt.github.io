@@ -1,8 +1,5 @@
-body {
-    background-color: #d9d2d0; /* Color inicial */
-    transition: background-color 0.5s ease;
-}
-
+/* Tema claro (cuando se selecciona el botón claro) */
 body.fondo-blanco {
-    background-color: #d9d2d0;
+    background-color: white;
+    color: #333;
 }
