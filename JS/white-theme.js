@@ -1,9 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const boton = document.getElementById('iDchangeColor');
+    // Obtener los botones por su clase
+    const btnClaro = document.querySelector('.idButtonWhite');
+    const btnOscuro = document.querySelector('.idButtonDark'); // Asegúrate que tenga esta clase
     
-    boton.addEventListener('click', function() {
-        document.body.classList.toggle('fondo-blanco');
-    });
+    // Evento para cambiar a tema claro (fondo blanco)
+    if (btnClaro) {
+        btnClaro.addEventListener('click', function() {
+            document.body.classList.add('fondo-blanco');
+        });
+    }
+    
+    // Evento para volver al tema oscuro (default)
+    if (btnOscuro) {
+        btnOscuro.addEventListener('click', function() {
+            document.body.classList.remove('fondo-blanco');
+        });
+    }
     
 });
