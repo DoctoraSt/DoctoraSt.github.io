@@ -1,5 +1,33 @@
-/* Tema claro (cuando se selecciona el botón claro) */
 body.fondo-blanco {
-    background-color: #d9d2d0;
-    color: #001d;
+    background: #d9d2d0 !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #bfb8b4, #d9d2d0)  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #bfb8b4, #d9d2d0) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+,*/
+}
+
+body.fondo-blanco .navbar {
+    background-color: #bfb8b4 !important;
+}
+
+body.fondo-blanco navbar-brand{
+  color: #00010D !important;
+}
+
+body.fondo-blanco a{
+  color: #3b403f !important;
+}
+
+body.fondo-blanco navbar-link{
+  color: #3b403f !important;
+}
+
+body.fondo-blanco p{
+  color: #3b403f !important;
+}
+
+body.fondo-blanco h1{
+  color: #00010D !important;
+}
+
+body.fondo-blanco h5{
+  color: #3b403f !important;
 }
