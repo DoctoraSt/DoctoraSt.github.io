@@ -1,7 +1,9 @@
-body{
+body {
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+,*/
+    color: white;
+    transition: all 0.5s ease;
 }
 
 .sobreMi{
@@ -80,7 +82,7 @@ p{
     font-weight: bold;
     display: flex;
     padding: 32px;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .fondo2{
