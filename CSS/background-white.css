@@ -1,33 +1,109 @@
 body.fondo-blanco {
-    background: #d9d2d0 !important;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #bfb8b4, #d9d2d0)  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #bfb8b4, #d9d2d0) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+,*/
+background: #BA5370;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #F4E2D8, #BA5370);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #F4E2D8, #BA5370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 body.fondo-blanco .navbar {
-    background-color: #bfb8b4 !important;
+    background-color: #b47285 !important;
 }
 
 body.fondo-blanco navbar-brand{
-  color: #00010D !important;
+  color: #F4E2D8 !important;
 }
 
 body.fondo-blanco a{
-  color: #3b403f !important;
+  color: #F4E2D8 !important;
 }
 
 body.fondo-blanco navbar-link{
-  color: #3b403f !important;
+  color: #f7c6d4 !important;
 }
 
 body.fondo-blanco p{
-  color: #3b403f !important;
+  font-size: medium;
+  color: #F4E2D8 !important;
 }
 
 body.fondo-blanco h1{
-  color: #00010D !important;
+  color: #F4E2D8 !important;
 }
 
 body.fondo-blanco h5{
-  color: #3b403f !important;
+  color: #BA5370 !important;
+}
+
+body.fondo-blanco .container{
+    width: 176px;
+    height: 174px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: center;
+    border-radius: 40px;
+    gap: 8px;
+    background: var(--preto-branco, #cf95a7);
+}
+
+body.fondo-blanco .container2{
+    width: 200px;
+    height: 225px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 40px;
+    gap: 9px;
+    background: var(--preto-branco, #cc718e);
+}
+
+body.fondo-blanco .links a:hover{
+    color: #000000 !important; 
+    text-decoration: none !important;
+}
+
+body.fondo-blanco a:hover{
+  color: #000000 !important;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+/* Tema claro - logo blanco */
+body.fondo-blanco .HTML {
+    filter: brightness(0) invert(0.9) !important;
+}
+
+body.fondo-blanco .bootstrap{
+  filter: brightness(0) invert(0.9) !important;
+}
+
+body.fondo-blanco .repoBoton{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #BA5370;
+    color: #d9d2d0;
+    border: none;
+}
+
+body.fondo-blanco .repoBoton:hover{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #d9d2d0;
+    color: #b47285;
+    border: none;
+}
+
+body.fondo-blanco .demoBoton{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #BA5370;
+    color: #d9d2d0;
+    border: none;
+}
+
+body.fondo-blanco .demoBoton:hover{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #d9d2d0;
+    color: #BA5370;
+    border: none;
 }
