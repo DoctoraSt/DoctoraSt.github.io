@@ -1,209 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Images/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="description" content="Portafolio de Michelle Leal — Desarrolladora Front-End y Lic. en Multimedia y Animación Digital.">
+    <meta name="theme-color" content="#0f0d12">
+    <title>Michelle Leal · Portafolio</title>
+    <link rel="icon" href="./Images/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./CSS/styles.css"> 
-    <link rel="stylesheet" href="./CSS/background-white.css">
-    <title>Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script>
+        /* Aplica el tema guardado antes de pintar la página (evita parpadeo) */
+        (function () {
+            try {
+                var t = localStorage.getItem('tema');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand">Michelle Leal</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <a class="skip" href="#inicio">Saltar al contenido</a>
+
+    <!-- ============ NAVEGACIÓN ============ -->
+    <header class="nav" id="nav">
+        <div class="nav__inner wrap">
+            <a class="brand" href="#inicio" aria-label="Inicio">
+                <span class="brand__dot"></span>Michelle Leal
+            </a>
+
+            <nav class="nav__links" id="menu" aria-label="Principal">
+                <a href="#Sobre">Sobre mí</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Hobbies">Hobbies</a>
+                <a href="#formacion">Formación</a>
+                <a href="#Experiencia">Proyectos</a>
+                <a href="#Contacto">Contacto</a>
+            </nav>
+
+            <div class="nav__actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+                    <svg class="i-sun" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
+                    <svg class="i-moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="#Sobre mí">Sobre mí</a>
-                        <a class="nav-link" href="#Skills">Skills</a>
-                        <a class="nav-link" href="#Hobbies">Hobbies</a>
-                        <a class="nav-link" href="#formacion">Formación</a>
-                        <a class="nav-link" href="#Experiencia">Proyectos</a>
-                        <a class="nav-link" href="#Contacto">Contacto</a>
+                <button class="icon-btn nav__burger" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="inicio">
+        <!-- ============ HERO / SOBRE MÍ ============ -->
+        <section class="hero" id="Sobre">
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="wrap hero__grid">
+                <div class="hero__text reveal">
+                    <span class="eyebrow"><span class="pulse"></span>Disponible para nuevos proyectos</span>
+                    <h1 class="hero__title">
+                        Hola, soy <span class="grad nowrap">Michelle Leal</span>,<br>
+                        y construyo páginas web.
+                    </h1>
+                    <p class="hero__lead">
+                        Egresada de la Facultad de Ciencias Físico Matemáticas, de la
+                        Licenciatura en Multimedia y Animación Digital. Combino diseño,
+                        animación y código para crear experiencias web claras y atractivas.
+                    </p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary" href="#Experiencia">Ver proyectos</a>
+                        <a class="btn btn--ghost" href="Curriculum/CV_Michelle_Leal.pdf" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+                            Curriculum
+                        </a>
                     </div>
-                    <ul class="navbar-nav ms-auto">
-                        <li>
-                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button class="nav-link dropdown-toggle" title="theme" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
-                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
-                                </svg>
-                                <span id="bd-theme-text" class="d-lg-none ms-2">
-                                    Cambio de tema
-                                </span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <button class="dropdown-item d-flex align-items-center idButtonWhite" type="button" data-bs-theme-value="light" aria-pressed="false" aria-label="Tema Claro">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi me-2 opacity-50" viewBox="0 0 16 16">
-                                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
-                                        </svg>
-                                        Claro
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item d-flex align-items-center idButtonDark" type="button" data-bs-theme-value="dark" aria-pressed="false" aria-label="Tema Oscuro">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi me-2 opacity-50" viewBox="0 0 16 16">
-                                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                                        </svg>
-                                        Oscuro
-                                    </button>
-                                </li>
-                            </ul>
-                        </li>
+                    <ul class="social">
+                        <li><a href="https://github.com/DoctoraSt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                            <span>GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/michelle-leal-049b8b270/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                            <span>LinkedIn</span></a></li>
+                        <li><a href="https://www.instagram.com/doctorastaxx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                            <span>Instagram</span></a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <article>
-        <section class="sobreMi">
-            <h1 id="Sobre">Sobre mí</h1>
-            <p>Hola, mi nombre es Michelle Leal, y construyo páginas web.</p>
-            <p>
-                Egresada de la facultad de Ciencias Físico Matemáticas de la 
-                Licenciatura en Multimedia y Animación Digital. 
-            </p>
-            <div class="links">
-                <a href="https://github.com/DoctoraSt" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/michelle-leal-049b8b270/" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                <a href="https://www.instagram.com/doctorastaxx/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="Curriculum/CV_Michelle_Leal.pdf" target="_blank" rel="noopener noreferrer">Curriculum</a>
+                <div class="hero__art reveal">
+                    <div class="avatar">
+                        <img src="./Images/avatar.png" alt="Ilustración de Michelle Leal" width="480" height="480">
+                    </div>
+                    <div class="chip chip--a">&lt;/&gt; Front-End</div>
+                    <div class="chip chip--b">✦ UX / UI</div>
+                    <div class="chip chip--c">▶ Animación</div>
+                </div>
             </div>
         </section>
-    </article>
-    <section>
-        <h1 id="Skills">Skills</h1>
-        <div class="fondo1">
-            <div class="container">
-                <img title="HTML_icon" class="HTML" src="./Images/html-logo.png">
-                <p class="letras">HTML</p>
-            </div>
-            <div class="container">
-                <img title="JavaScript" class="HTML" src="./Images/javascript-logo.png">
-                <p class="letras">JavaScript</p>
-            </div>
-            <div class="container">
-                <img title="css_icon" class="HTML" src="./Images/css-logo.png">
-                <p class="letras">CSS</p>
-            </div>
-            <div class="container">
-                <img title="bootstrap_icon" class="bootstrap" src="./Images/bootstrap.png">
-                <p class="letras">Bootstrap</p>
-            </div>
-        </div>
-        <br>
-    </section>
-    <section>
-        <h1 id="Hobbies">Hobbies</h1>
-        <div class="fondo1">
-            <div class="container">
-                <img title="leer" class="HTML" src="./Images/leer.png">
-                <p class="letras">Lectura</p>
-            </div>
-            <div class="container">
-                <img title="escribir_icon" class="HTML" src="./Images/escribir_icon.png">
-                <p class="letras">Escritura</p>
-            </div>
-            <div class="container">
-                <img title="lupa" class="HTML" src="./Images/lupa.png">
-                <p class="letras">Investigación</p>
-            </div>
-            <div class="container">
-                <img title="musica" class="HTML" src="./Images/musica.png">
-                <p class="letras">Música</p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <h1 id="formacion">Formación académica</h1>
-        <div class="fondo2">
-            <div class="container2">
-                <img title="udemy" class="udemy" src="./Images/udemy.png">
-                <p>UDEMY</p>
-                <p>Cursos web - 2022</p>
-            </div>
-            <div class="container2">
-                <img title="alura-sello" class="alura" src="./Images/alura-sello.png">
-                <p>Formación en UX Desing</p>
-                <p>2023 - Alura</p>
-            </div>
-            <div class="container2">
-                <img title="logo_fcfm" class="fcfm" src="./Images/FCFM_PNG.png">
-                <p>Lic. en Multimedia y Animación Digital</p>
-                <p>Enero 2019 - Junio 2025</p>
-            </div>
-        </div>
-    </section>
-    <section class="area">
-        <br>
-        <h1 id="Experiencia">Proyectos</h1>
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="botones2">
-                        <button type="button" class="repoBoton" onclick="location.href='https://github.com/DoctoraSt/Challenge-Oracle-One'">Repositorio</button>
-                        <button type="button" class="demoBoton">
-                            <a target="_blank" href="./Front-End/Encriptador/Encriptador.html">Ver Demo</a>
-                        </button>
-                    </div>
-                    <img src="./Images/Encriptador-texto.png" class="mobil d-block" alt="...">
-                    <br>
-                    <br>
-                    <br>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Página encriptadora de texto</h5>
-                        <h5>Página encriptadora de texto realizado para una actividad de cursos en Alura Latam</>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="botones">
-                        <button type="button" class="repoBoton" onclick="location.href='https://github.com/DoctoraSt/GL---Logistics-example-'">Repositorio</button>
-                        <button type="button" class="demoBoton">
-                            <a target="_blank" href="./Front-End/GL---Logistics-example-/Principal.html">Ver Demo</a>
-                        </button>
-                    </div>
-                    <img src="./Images/Logistica.png" class="mobil d-block" alt="...">
-                    <br>
-                    <br>
-                    <br>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Página de GL Logistics</h5>
-                        <h5>Página de empresa de lógistica</h5>
-                    </div>
+
+        <!-- ============ SKILLS ============ -->
+        <section class="section" id="Skills">
+            <div class="wrap">
+                <header class="section__head reveal">
+                    <span class="kicker">01 · Tecnologías</span>
+                    <h2>Skills</h2>
+                    <p>Las herramientas con las que doy vida a mis proyectos.</p>
+                </header>
+                <div class="tiles">
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/html-logo.png" alt="" loading="lazy">
+                        <h3>HTML</h3>
+                        <span>Estructura semántica</span>
+                    </article>
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/javascript-logo.png" alt="" loading="lazy">
+                        <h3>JavaScript</h3>
+                        <span>Interactividad y lógica</span>
+                    </article>
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/css-logo.png" alt="" loading="lazy">
+                        <h3>CSS</h3>
+                        <span>Diseño responsivo</span>
+                    </article>
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/bootstrap.png" alt="" loading="lazy">
+                        <h3>Bootstrap</h3>
+                        <span>Maquetación ágil</span>
+                    </article>
                 </div>
             </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previo</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-                </button>
+        </section>
+
+        <!-- ============ HOBBIES ============ -->
+        <section class="section section--alt" id="Hobbies">
+            <div class="wrap">
+                <header class="section__head reveal">
+                    <span class="kicker">02 · Fuera del código</span>
+                    <h2>Hobbies</h2>
+                    <p>Lo que me inspira y alimenta mi creatividad.</p>
+                </header>
+                <div class="tiles tiles--soft">
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/leer.png" alt="" loading="lazy">
+                        <h3>Lectura</h3>
+                    </article>
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/escribir_icon.png" alt="" loading="lazy">
+                        <h3>Escritura</h3>
+                    </article>
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/lupa.png" alt="" loading="lazy">
+                        <h3>Investigación</h3>
+                    </article>
+                    <article class="tile reveal">
+                        <img class="glyph" src="./Images/musica.png" alt="" loading="lazy">
+                        <h3>Música</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FORMACIÓN ============ -->
+        <section class="section" id="formacion">
+            <div class="wrap">
+                <header class="section__head reveal">
+                    <span class="kicker">03 · Educación</span>
+                    <h2>Formación académica</h2>
+                    <p>Mi recorrido de aprendizaje, de lo más reciente a lo primero.</p>
+                </header>
+                <ol class="timeline">
+                    <li class="tl reveal">
+                        <div class="tl__logo"><img src="./Images/FCFM_PNG.png" alt="Logo FCFM" loading="lazy"></div>
+                        <div class="tl__body">
+                            <span class="tl__date">Enero 2019 – Junio 2025</span>
+                            <h3>Lic. en Multimedia y Animación Digital</h3>
+                            <p>Facultad de Ciencias Físico Matemáticas · UANL</p>
+                        </div>
+                    </li>
+                    <li class="tl reveal">
+                        <div class="tl__logo tl__logo--dark"><img src="./Images/alura-sello.png" alt="Logo Alura" loading="lazy"></div>
+                        <div class="tl__body">
+                            <span class="tl__date">2023</span>
+                            <h3>Formación en UX Design</h3>
+                            <p>Alura Latam</p>
+                        </div>
+                    </li>
+                    <li class="tl reveal">
+                        <div class="tl__logo tl__logo--dark"><img src="./Images/udemy.png" alt="Logo Udemy" loading="lazy"></div>
+                        <div class="tl__body">
+                            <span class="tl__date">2022</span>
+                            <h3>Cursos de desarrollo web</h3>
+                            <p>Udemy</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ PROYECTOS ============ -->
+        <section class="section section--alt" id="Experiencia">
+            <div class="wrap">
+                <header class="section__head reveal">
+                    <span class="kicker">04 · Trabajo</span>
+                    <h2>Proyectos</h2>
+                    <p>Una selección de páginas que he diseñado y desarrollado.</p>
+                </header>
+                <div class="projects">
+                    <article class="project reveal">
+                        <a class="project__media" href="./Front-End/Encriptador/Encriptador.html" target="_blank" rel="noopener noreferrer" aria-label="Ver demo del Encriptador">
+                            <img src="./Images/Encriptador-texto.png" alt="Captura de la página encriptadora de texto" loading="lazy">
+                        </a>
+                        <div class="project__body">
+                            <h3>Encriptador de texto</h3>
+                            <p>Página encriptadora de texto realizada para una actividad de cursos en Alura Latam (Challenge Oracle ONE).</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <div class="project__actions">
+                                <a class="btn btn--primary btn--sm" href="./Front-End/Encriptador/Encriptador.html" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                                <a class="btn btn--ghost btn--sm" href="https://github.com/DoctoraSt/Challenge-Oracle-One" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project reveal">
+                        <a class="project__media" href="./Front-End/GL---Logistics-example-/Principal.html" target="_blank" rel="noopener noreferrer" aria-label="Ver demo de GL Logistics">
+                            <img src="./Images/Logistica.png" alt="Captura de la página de GL Logistics" loading="lazy">
+                        </a>
+                        <div class="project__body">
+                            <h3>GL Logistics</h3>
+                            <p>Sitio para una empresa de logística: inicio, sobre nosotros, contacto y rastreo de envíos.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li></ul>
+                            <div class="project__actions">
+                                <a class="btn btn--primary btn--sm" href="./Front-End/GL---Logistics-example-/Principal.html" target="_blank" rel="noopener noreferrer">Ver demo</a>
+                                <a class="btn btn--ghost btn--sm" href="https://github.com/DoctoraSt/GL---Logistics-example-" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section class="section" id="Contacto">
+            <div class="wrap">
+                <div class="contact reveal">
+                    <span class="kicker">05 · Contacto</span>
+                    <h2>¿Trabajamos juntos?</h2>
+                    <p>Estoy abierta a oportunidades, colaboraciones y proyectos freelance. Escríbeme por cualquiera de estos medios.</p>
+                    <div class="contact__links">
+                        <a class="btn btn--primary" href="https://www.linkedin.com/in/michelle-leal-049b8b270/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a class="btn btn--ghost" href="https://github.com/DoctoraSt" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a class="btn btn--ghost" href="https://www.instagram.com/doctorastaxx/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a class="btn btn--ghost" href="Curriculum/CV_Michelle_Leal.pdf" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <span>Desarrollado por <strong>Michelle Leal</strong></span>
+            <span>© <span id="year">2024</span></span>
         </div>
-    </section>
-    <br>
-    <br>
-    <footer>
-        <h5>Desarrollado por: Michelle Leal</h5>
-        <h5>2024</h5>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./JS/white-theme.js"></script>
+
+    <button class="to-top" id="toTop" type="button" aria-label="Volver arriba">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/></svg>
+    </button>
+
+    <script src="./JS/main.js"></script>
 </body>
 </html>
