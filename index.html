@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Michelle Leal — Desarrolladora Front-End y Lic. en Multimedia y Animación Digital.">
+    <meta name="description" data-i18n-attr="content:meta.desc" content="Portafolio de Michelle Leal — Desarrolladora Front-End y Lic. en Multimedia y Animación Digital.">
     <meta name="theme-color" content="#0f0d12">
     <title>Michelle Leal · Portafolio</title>
     <link rel="icon" href="./Images/avatar.png">
@@ -18,31 +18,38 @@
                 var t = localStorage.getItem('tema');
                 if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
                 document.documentElement.setAttribute('data-theme', t);
+                var l = localStorage.getItem('idioma');
+                if (!l) l = (navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+                document.documentElement.setAttribute('lang', l);
             } catch (e) {}
         })();
     </script>
 </head>
 <body>
-    <a class="skip" href="#inicio">Saltar al contenido</a>
+    <a class="skip" href="#inicio" data-i18n="skip">Saltar al contenido</a>
 
     <!-- ============ NAVEGACIÓN ============ -->
     <header class="nav" id="nav">
         <div class="nav__inner wrap">
-            <a class="brand" href="#inicio" aria-label="Inicio">
+            <a class="brand" href="#inicio" aria-label="Inicio" data-i18n-attr="aria-label:nav.home">
                 <span class="brand__dot"></span>Michelle Leal
             </a>
 
-            <nav class="nav__links" id="menu" aria-label="Principal">
-                <a href="#Sobre">Sobre mí</a>
+            <nav class="nav__links" id="menu" aria-label="Principal" data-i18n-attr="aria-label:nav.main">
+                <a href="#Sobre" data-i18n="nav.about">Sobre mí</a>
                 <a href="#Skills">Skills</a>
-                <a href="#Hobbies">Hobbies</a>
-                <a href="#formacion">Formación</a>
-                <a href="#Experiencia">Proyectos</a>
-                <a href="#Contacto">Contacto</a>
+                <a href="#Hobbies" data-i18n="nav.hobbies">Hobbies</a>
+                <a href="#formacion" data-i18n="nav.education">Formación</a>
+                <a href="#Experiencia" data-i18n="nav.projects">Proyectos</a>
+                <a href="#Contacto" data-i18n="nav.contact">Contacto</a>
             </nav>
 
             <div class="nav__actions">
-                <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+                <button class="lang-btn" id="langToggle" type="button" aria-label="Switch to English" title="Switch to English">
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>
+                    <span class="lang-btn__code" id="langCode">EN</span>
+                </button>
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar tema" title="Cambiar tema" data-i18n-attr="aria-label:nav.theme;title:nav.theme">
                     <svg class="i-sun" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
                     <svg class="i-moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
                 </button>
@@ -59,21 +66,21 @@
             <div class="hero__glow" aria-hidden="true"></div>
             <div class="wrap hero__grid">
                 <div class="hero__text reveal">
-                    <span class="eyebrow"><span class="pulse"></span>Disponible para nuevos proyectos</span>
-                    <h1 class="hero__title">
+                    <span class="eyebrow"><span class="pulse"></span><span data-i18n="hero.badge">Disponible para nuevos proyectos</span></span>
+                    <h1 class="hero__title" data-i18n-html="hero.title">
                         Hola, soy <span class="grad nowrap">Michelle Leal</span>,<br>
                         y construyo páginas web.
                     </h1>
-                    <p class="hero__lead">
+                    <p class="hero__lead" data-i18n="hero.lead">
                         Egresada de la Facultad de Ciencias Físico Matemáticas, de la
                         Licenciatura en Multimedia y Animación Digital. Combino diseño,
                         animación y código para crear experiencias web claras y atractivas.
                     </p>
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="#Experiencia">Ver proyectos</a>
+                        <a class="btn btn--primary" href="#Experiencia" data-i18n="hero.cta">Ver proyectos</a>
                         <a class="btn btn--ghost" href="Curriculum/CV_Michelle_Leal.pdf" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
-                            Curriculum
+                            <span data-i18n="hero.cv">Curriculum</span>
                         </a>
                     </div>
                     <ul class="social">
@@ -90,11 +97,11 @@
                 </div>
                 <div class="hero__art reveal">
                     <div class="avatar">
-                        <img src="./Images/avatar.png" alt="Ilustración de Michelle Leal" width="480" height="480">
+                        <img src="./Images/avatar.png" alt="Ilustración de Michelle Leal" data-i18n-attr="alt:hero.alt" width="480" height="480">
                     </div>
                     <div class="chip chip--a">&lt;/&gt; Front-End</div>
                     <div class="chip chip--b">✦ UX / UI</div>
-                    <div class="chip chip--c">▶ Animación</div>
+                    <div class="chip chip--c" data-i18n="hero.chip">▶ Animación</div>
                 </div>
             </div>
         </section>
@@ -103,30 +110,30 @@
         <section class="section" id="Skills">
             <div class="wrap">
                 <header class="section__head reveal">
-                    <span class="kicker">01 · Tecnologías</span>
+                    <span class="kicker" data-i18n="skills.kicker">01 · Tecnologías</span>
                     <h2>Skills</h2>
-                    <p>Las herramientas con las que doy vida a mis proyectos.</p>
+                    <p data-i18n="skills.sub">Las herramientas con las que doy vida a mis proyectos.</p>
                 </header>
                 <div class="tiles">
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/html-logo.png" alt="" loading="lazy">
                         <h3>HTML</h3>
-                        <span>Estructura semántica</span>
+                        <span data-i18n="skills.html">Estructura semántica</span>
                     </article>
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/javascript-logo.png" alt="" loading="lazy">
                         <h3>JavaScript</h3>
-                        <span>Interactividad y lógica</span>
+                        <span data-i18n="skills.js">Interactividad y lógica</span>
                     </article>
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/css-logo.png" alt="" loading="lazy">
                         <h3>CSS</h3>
-                        <span>Diseño responsivo</span>
+                        <span data-i18n="skills.css">Diseño responsivo</span>
                     </article>
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/bootstrap.png" alt="" loading="lazy">
                         <h3>Bootstrap</h3>
-                        <span>Maquetación ágil</span>
+                        <span data-i18n="skills.bs">Maquetación ágil</span>
                     </article>
                 </div>
             </div>
@@ -136,26 +143,26 @@
         <section class="section section--alt" id="Hobbies">
             <div class="wrap">
                 <header class="section__head reveal">
-                    <span class="kicker">02 · Fuera del código</span>
+                    <span class="kicker" data-i18n="hobbies.kicker">02 · Fuera del código</span>
                     <h2>Hobbies</h2>
-                    <p>Lo que me inspira y alimenta mi creatividad.</p>
+                    <p data-i18n="hobbies.sub">Lo que me inspira y alimenta mi creatividad.</p>
                 </header>
                 <div class="tiles tiles--soft">
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/leer.png" alt="" loading="lazy">
-                        <h3>Lectura</h3>
+                        <h3 data-i18n="hobbies.read">Lectura</h3>
                     </article>
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/escribir_icon.png" alt="" loading="lazy">
-                        <h3>Escritura</h3>
+                        <h3 data-i18n="hobbies.write">Escritura</h3>
                     </article>
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/lupa.png" alt="" loading="lazy">
-                        <h3>Investigación</h3>
+                        <h3 data-i18n="hobbies.research">Investigación</h3>
                     </article>
                     <article class="tile reveal">
                         <img class="glyph" src="./Images/musica.png" alt="" loading="lazy">
-                        <h3>Música</h3>
+                        <h3 data-i18n="hobbies.music">Música</h3>
                     </article>
                 </div>
             </div>
@@ -165,24 +172,24 @@
         <section class="section" id="formacion">
             <div class="wrap">
                 <header class="section__head reveal">
-                    <span class="kicker">03 · Educación</span>
-                    <h2>Formación académica</h2>
-                    <p>Mi recorrido de aprendizaje, de lo más reciente a lo primero.</p>
+                    <span class="kicker" data-i18n="edu.kicker">03 · Educación</span>
+                    <h2 data-i18n="edu.title">Formación académica</h2>
+                    <p data-i18n="edu.sub">Mi recorrido de aprendizaje, de lo más reciente a lo primero.</p>
                 </header>
                 <ol class="timeline">
                     <li class="tl reveal">
                         <div class="tl__logo"><img src="./Images/FCFM_PNG.png" alt="Logo FCFM" loading="lazy"></div>
                         <div class="tl__body">
-                            <span class="tl__date">Enero 2019 – Junio 2025</span>
-                            <h3>Lic. en Multimedia y Animación Digital</h3>
-                            <p>Facultad de Ciencias Físico Matemáticas · UANL</p>
+                            <span class="tl__date" data-i18n="edu.d1">Enero 2019 – Junio 2025</span>
+                            <h3 data-i18n="edu.t1">Lic. en Multimedia y Animación Digital</h3>
+                            <p data-i18n="edu.s1">Facultad de Ciencias Físico Matemáticas · UANL</p>
                         </div>
                     </li>
                     <li class="tl reveal">
                         <div class="tl__logo tl__logo--dark"><img src="./Images/alura-sello.png" alt="Logo Alura" loading="lazy"></div>
                         <div class="tl__body">
                             <span class="tl__date">2023</span>
-                            <h3>Formación en UX Design</h3>
+                            <h3 data-i18n="edu.t2">Formación en UX Design</h3>
                             <p>Alura Latam</p>
                         </div>
                     </li>
@@ -190,7 +197,7 @@
                         <div class="tl__logo tl__logo--dark"><img src="./Images/udemy.png" alt="Logo Udemy" loading="lazy"></div>
                         <div class="tl__body">
                             <span class="tl__date">2022</span>
-                            <h3>Cursos de desarrollo web</h3>
+                            <h3 data-i18n="edu.t3">Cursos de desarrollo web</h3>
                             <p>Udemy</p>
                         </div>
                     </li>
@@ -202,36 +209,36 @@
         <section class="section section--alt" id="Experiencia">
             <div class="wrap">
                 <header class="section__head reveal">
-                    <span class="kicker">04 · Trabajo</span>
-                    <h2>Proyectos</h2>
-                    <p>Una selección de páginas que he diseñado y desarrollado.</p>
+                    <span class="kicker" data-i18n="proj.kicker">04 · Trabajo</span>
+                    <h2 data-i18n="proj.title">Proyectos</h2>
+                    <p data-i18n="proj.sub">Una selección de páginas que he diseñado y desarrollado.</p>
                 </header>
                 <div class="projects">
                     <article class="project reveal">
-                        <a class="project__media" href="./Front-End/Encriptador/Encriptador.html" target="_blank" rel="noopener noreferrer" aria-label="Ver demo del Encriptador">
-                            <img src="./Images/Encriptador-texto.png" alt="Captura de la página encriptadora de texto" loading="lazy">
+                        <a class="project__media" href="./Front-End/Encriptador/Encriptador.html" target="_blank" rel="noopener noreferrer" aria-label="Ver demo del Encriptador" data-i18n-attr="aria-label:proj.p1.aria">
+                            <img src="./Images/Encriptador-texto.png" alt="Captura de la página encriptadora de texto" data-i18n-attr="alt:proj.p1.alt" loading="lazy">
                         </a>
                         <div class="project__body">
-                            <h3>Encriptador de texto</h3>
-                            <p>Página encriptadora de texto realizada para una actividad de cursos en Alura Latam (Challenge Oracle ONE).</p>
+                            <h3 data-i18n="proj.p1.title">Encriptador de texto</h3>
+                            <p data-i18n="proj.p1.desc">Página encriptadora de texto realizada para una actividad de cursos en Alura Latam (Challenge Oracle ONE).</p>
                             <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                             <div class="project__actions">
-                                <a class="btn btn--primary btn--sm" href="./Front-End/Encriptador/Encriptador.html" target="_blank" rel="noopener noreferrer">Ver demo</a>
-                                <a class="btn btn--ghost btn--sm" href="https://github.com/DoctoraSt/Challenge-Oracle-One" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                                <a class="btn btn--primary btn--sm" href="./Front-End/Encriptador/Encriptador.html" target="_blank" rel="noopener noreferrer" data-i18n="proj.demo">Ver demo</a>
+                                <a class="btn btn--ghost btn--sm" href="https://github.com/DoctoraSt/Challenge-Oracle-One" target="_blank" rel="noopener noreferrer" data-i18n="proj.repo">Repositorio</a>
                             </div>
                         </div>
                     </article>
                     <article class="project reveal">
-                        <a class="project__media" href="./Front-End/GL---Logistics-example-/Principal.html" target="_blank" rel="noopener noreferrer" aria-label="Ver demo de GL Logistics">
-                            <img src="./Images/Logistica.png" alt="Captura de la página de GL Logistics" loading="lazy">
+                        <a class="project__media" href="./Front-End/GL---Logistics-example-/Principal.html" target="_blank" rel="noopener noreferrer" aria-label="Ver demo de GL Logistics" data-i18n-attr="aria-label:proj.p2.aria">
+                            <img src="./Images/Logistica.png" alt="Captura de la página de GL Logistics" data-i18n-attr="alt:proj.p2.alt" loading="lazy">
                         </a>
                         <div class="project__body">
                             <h3>GL Logistics</h3>
-                            <p>Sitio para una empresa de logística: inicio, sobre nosotros, contacto y rastreo de envíos.</p>
+                            <p data-i18n="proj.p2.desc">Sitio para una empresa de logística: inicio, sobre nosotros, contacto y rastreo de envíos.</p>
                             <ul class="tags"><li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li></ul>
                             <div class="project__actions">
-                                <a class="btn btn--primary btn--sm" href="./Front-End/GL---Logistics-example-/Principal.html" target="_blank" rel="noopener noreferrer">Ver demo</a>
-                                <a class="btn btn--ghost btn--sm" href="https://github.com/DoctoraSt/GL---Logistics-example-" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                                <a class="btn btn--primary btn--sm" href="./Front-End/GL---Logistics-example-/Principal.html" target="_blank" rel="noopener noreferrer" data-i18n="proj.demo">Ver demo</a>
+                                <a class="btn btn--ghost btn--sm" href="https://github.com/DoctoraSt/GL---Logistics-example-" target="_blank" rel="noopener noreferrer" data-i18n="proj.repo">Repositorio</a>
                             </div>
                         </div>
                     </article>
@@ -243,14 +250,14 @@
         <section class="section" id="Contacto">
             <div class="wrap">
                 <div class="contact reveal">
-                    <span class="kicker">05 · Contacto</span>
-                    <h2>¿Trabajamos juntos?</h2>
-                    <p>Estoy abierta a oportunidades, colaboraciones y proyectos freelance. Escríbeme por cualquiera de estos medios.</p>
+                    <span class="kicker" data-i18n="contact.kicker">05 · Contacto</span>
+                    <h2 data-i18n="contact.title">¿Trabajamos juntos?</h2>
+                    <p data-i18n="contact.sub">Estoy abierta a oportunidades, colaboraciones y proyectos freelance. Escríbeme por cualquiera de estos medios.</p>
                     <div class="contact__links">
                         <a class="btn btn--primary" href="https://www.linkedin.com/in/michelle-leal-049b8b270/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         <a class="btn btn--ghost" href="https://github.com/DoctoraSt" target="_blank" rel="noopener noreferrer">GitHub</a>
                         <a class="btn btn--ghost" href="https://www.instagram.com/doctorastaxx/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a class="btn btn--ghost" href="Curriculum/CV_Michelle_Leal.pdf" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+                        <a class="btn btn--ghost" href="Curriculum/CV_Michelle_Leal.pdf" target="_blank" rel="noopener noreferrer" data-i18n="contact.cv">Descargar CV</a>
                     </div>
                 </div>
             </div>
@@ -259,15 +266,16 @@
 
     <footer class="footer">
         <div class="wrap footer__inner">
-            <span>Desarrollado por <strong>Michelle Leal</strong></span>
+            <span data-i18n-html="footer.by">Desarrollado por <strong>Michelle Leal</strong></span>
             <span>© <span id="year">2024</span></span>
         </div>
     </footer>
 
-    <button class="to-top" id="toTop" type="button" aria-label="Volver arriba">
+    <button class="to-top" id="toTop" type="button" aria-label="Volver arriba" data-i18n-attr="aria-label:totop">
         <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/></svg>
     </button>
 
+    <script src="./JS/i18n.js"></script>
     <script src="./JS/main.js"></script>
 </body>
 </html>
