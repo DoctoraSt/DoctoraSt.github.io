@@ -18,7 +18,7 @@
         'nav.contact': 'Contact',
         'nav.theme': 'Toggle theme',
 
-        'hero.badge': 'Available for new projects',
+        'hero.badge': 'Open to new opportunities',
         'hero.title': 'Hi, I\'m <span class="grad nowrap">Michelle Leal</span>,<br>\n                        and I build websites.',
         'hero.lead': 'Graduate of the Faculty of Physical and Mathematical Sciences with a degree in Multimedia and Digital Animation. I combine design, animation and code to create clear, engaging web experiences. I currently work in QA, performing manual and automated testing.',
         'hero.cta': 'View projects',
